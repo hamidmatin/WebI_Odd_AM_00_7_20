@@ -1,0 +1,15 @@
+IntelliSense for CSS class names in HTML
+HTML CSS Support
+HTML Snippets
+Visual Studio IntelliCode
+Live Server
+HTMLHint
+Image preview
+Path Intellisense
+
+        
+Beautify 
+Prettier - Code formatter
+
+
+
