@@ -6,10 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    html{
-      direction: rtl;
-
-    }
     .nav {
       background-color: crimson;
       height: 40px;
@@ -21,7 +17,7 @@
       margin: 0;
     }
     .nav > ul > li{
-      float: right;
+      float: left;
     }
     .nav a{
       line-height: 40px;
@@ -35,7 +31,6 @@
     .nav ul ul {
       position: absolute;
       visibility: hidden;
-      z-index: 1000;
 
       /* راه اول */
       /* border-top: 15px solid transparent; */
@@ -72,36 +67,23 @@
     .nav li{
       position: relative;
     }
-    .nav ul ul ul a{
-      background-color: goldenrod;
-    }
+
     .nav ul ul ul{
-      right: 100%;
+      left: 100%;
       top: 0;
       padding-top: 0;
-      /* padding-left: 15px; */
-      padding-right: 15px;
+      padding-left: 15px;
     }
 
-
-    /*************/
-    .banner {
-        width: 100%;
-        display: block;
-        height: 80vh;
-        background: url('/images/inside-weather-E5lK_COkD2E-unsplash-copy.jpg') no-repeat center;
-        background-size: cover;
-        position: relative;
-      }
-      .banner .title{
-        background-color: rgba(233, 159, 61, 0.39);
-        position: absolute;
-        width: 40%;
-        right: 15%;
-        top: 50px;
-        padding: 15px;
-      }
-      
+    /***************************/
+    .nav ul .has-submenu::after{
+      content: '';
+      display: inline-block;
+      margin-left: 5px;
+      border-top: 6px solid;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+    } 
   </style>
 </head>
 <body>
@@ -109,12 +91,12 @@
     <ul>
       <li><a href="#">Menu 1</a></li>
       <li>
-        <a href="#">Menu 2</a>
+        <a href="#" class="has-submenu">Menu 2</a>
         <ul>
-          <li><a href="#">Menu Item 2 - 1 aasdfas adadfad</a></li>
+          <li><a href="#">Menu Item 2 - 1</a></li>
           <li><a href="#">Menu Item 2 - 2</a></li>
           <li>
-            <a href="#">Menu Item 2 - 3</a>
+            <a href="#" class="has-submenu">Menu Item 2 - 3</a>
             <ul>
               <li><a href="#">Menu Item 2 - 3 - 1</a></li>
               <li><a href="#">Menu Item 2 - 3 - 2</a></li>
@@ -131,10 +113,10 @@
       <li><a href="#">Menu 3</a></li>
       <li><a href="#">Menu 4</a></li>
       <li>
-        <a href="#">Menu 5</a>
+        <a href="#" class="has-submenu">Menu 5</a>
         <ul>
           <li>
-            <a href="#">5 - 1</a>
+            <a href="#" class="has-submenu">Menu Item 5 - 1</a>
             <ul>
               <li><a href="#">Menu Item 5 - 1 - 1</a></li>
               <li><a href="#">Menu Item 5 - 1 - 2</a></li>
@@ -143,31 +125,17 @@
               <li><a href="#">Menu Item 5 - 1 - 5</a></li>
             </ul>
           </li>
-          <li><a href="#">5 - 2</a></li>
-          <li><a href="#">5 - 3</a></li>
-          <li><a href="#">5 - 4</a></li>
-          <li><a href="#">5 - 5</a></li>
-          <li><a href="#">5 - 6</a></li>
-          <li><a href="#">5 - 7</a></li>
+          <li><a href="#">Menu Item 5 - 2</a></li>
+          <li><a href="#">Menu Item 5 - 3</a></li>
+          <li><a href="#">Menu Item 5 - 4</a></li>
+          <li><a href="#">Menu Item 5 - 5</a></li>
+          <li><a href="#">Menu Item 5 - 6</a></li>
+          <li><a href="#">Menu Item 5 - 7</a></li>
           <li>
-            <a href="#">5 - 8</a>
+            <a href="#" class="has-submenu">Menu Item 5 - 8</a>
             <ul>
               <li><a href="#">Menu Item 5 - 8 - 1</a></li>
-              <li>
-                <a href="#">Menu Item 5 - 8 - 2</a>
-                <ul>
-                  <li><a href="#">Menu Item 5 - 8 - 2 - 1</a></li>
-                  <li><a href="#">Menu Item 5 - 8 - 2 - 2</a></li>
-                  <li><a href="#">Menu Item 5 - 8 - 2 - 3</a>
-                    <ul>
-                      <li><a href="#">Menu Item 5 - 8 - 2 - 3 - 1</a></li>
-                      <li><a href="#">Menu Item 5 - 8 - 2 - 3 - 2</a></li>
-                      <li><a href="#">Menu Item 5 - 8 - 2 - 3 - 3</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Menu Item 5 - 8 - 2 - 4</a></li>
-                </ul>
-              </li>
+              <li><a href="#">Menu Item 5 - 8 - 2</a></li>
               <li><a href="#">Menu Item 5 - 8 - 3</a></li>
               <li><a href="#">Menu Item 5 - 8 - 4</a></li>
               <li><a href="#">Menu Item 5 - 8 - 5</a></li>
@@ -178,16 +146,6 @@
       </li>
       <li><a href="#">Menu 6</a></li>
     </ul>
-  </div>
-  <div class="banner">
-    <div class="title">
-      <h1>Title of my site</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque voluptates amet
-        maiores molestiae dolore, provident odio quidem expedita unde ullam optio consequuntur
-        accusantium sint quo voluptas, nostrum, totam quos eos.
-      </p>
-    </div>
   </div>
 </body>
 </html>
