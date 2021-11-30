@@ -84,6 +84,20 @@
       border-left: 6px solid transparent;
       border-right: 6px solid transparent;
     } 
+    .nav ul ul .has-submenu{
+      position: relative;
+    }
+
+    .nav ul ul .has-submenu::after{
+      position: absolute;
+      top: calc(50% - 6px);
+      right: 15px;
+      /* margin-top: -6px; */
+      border: none;
+      border-left: 6px solid;
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+    }
   </style>
 </head>
 <body>
