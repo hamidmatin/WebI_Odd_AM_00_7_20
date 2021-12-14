@@ -1,0 +1,248 @@
+*{box-sizing: border-box;}
+body{
+  margin: 0;
+  line-height: 26px;
+  background-color: #fff;
+  font-family: lato, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #8c9597;
+}
+
+.row{
+  display: flex;
+  flex-flow: row wrap;
+}
+.container{
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.column-3{
+  width: 33.33%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.column-4{
+  width: 25%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/********************/
+#header{
+  background: url('/images/front-page-header.jpg') no-repeat center fixed;
+  background-size: cover;
+}
+#header nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+#header nav .logo{
+
+}
+
+#header nav ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+
+}
+#header nav a{
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin-left: 30px;
+}
+#header nav a:hover{
+  color: #ffde00;
+}
+
+#header .title{
+  color: white;
+  text-align: center;
+  margin-top: 200px;
+  padding-bottom: 300px;
+}
+
+#header .title h1{
+  font-family: poppins;
+}
+
+/********************/
+.main-section{
+  padding: 50px 0;
+}
+
+.main-section h2, .main-section p{
+  text-align: center;
+}
+
+.progress{
+  height: 150px;
+  /* background-color: rgb(236, 236, 141); */
+  position: relative;
+}
+.progress .progress-label{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: black;
+}
+
+.progress .progress-axis{
+  height: 2px;
+  width: 100%;
+  background-color: #ccc;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.progress .progress-bar{
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  transform: translateY(-50%);
+  height: 6px;
+  background-color: black;
+}
+
+.progress .progress-bar::after{
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+}
+.progress .progress-value{
+  background-color: black;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 20px));
+}
+.progress .progress-value::after{
+  content: '';
+  border-top: 6px solid black;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/********* Typography ***********/
+.progress.typography .progress-value,
+.progress.typography .progress-bar,
+.progress.typography .progress-bar::after
+{
+  background-color: #f18b6d;
+  color: white;
+}
+
+.progress.typography .progress-value::after{
+  border-top-color: #f18b6d;
+}
+.progress.progress.typography .progress-label{
+  color: #f18b6d; 
+}
+
+.progress.typography .progress-bar{
+  width: 60%;
+}
+.progress.typography .progress-value{
+  left: 60%;
+}
+
+/********* design ***********/
+.progress.design .progress-value,
+.progress.design .progress-bar,
+.progress.design .progress-bar::after
+{
+  background-color: #f1d204;
+  color: white;
+}
+
+.progress.design .progress-value::after{
+  border-top-color: #f1d204;
+}
+.progress.progress.design .progress-label{
+  color: #f1d204; 
+}
+
+.progress.design .progress-bar{
+  width: 82%;
+}
+.progress.design .progress-value{
+  left: 82%;
+}
+
+/********* development ***********/
+.progress.development .progress-value,
+.progress.development .progress-bar,
+.progress.development .progress-bar::after
+{
+  background-color: #6a4d8a;
+  color: white;
+}
+
+.progress.development .progress-value::after{
+  border-top-color: #6a4d8a;
+}
+.progress.progress.development .progress-label{
+  color: #6a4d8a; 
+}
+
+.progress.development .progress-bar{
+  width: 86%;
+}
+.progress.development .progress-value{
+  left: 86%;
+}
+
+/***************/
+#projects {
+  background-image: url('/images/pattern.png');
+  padding-bottom: 0;
+}
+.project{
+  margin-left: -16px;
+  margin-right: -16px;
+  position: relative;
+  overflow: hidden;
+}
+.project::after{
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.466);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  transition: all .3s;
+}
+.project img{
+  display: block;
+  width: 100%;
+  transition: all .3s;
+}
+.project:hover::after{
+  opacity: 0;
+}
+.project:hover img{
+  transform: scale(1.3);
+}
