@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="lib/fontawesome-free-5.15.3-web/css/all.min.css" />
+    <title>Document</title>
+    <style>
+      .row {
+        margin-bottom: 10px;
+      }
+      .label-control {
+        color: blue;
+        display: inline-block;
+        width: 80px;
+      }
+      label.label-control {
+        cursor: pointer;
+      }
+      input, textarea , select, button{
+        outline: none;
+      }
+
+      #textarea {
+        /* font-size: 40px; */
+        width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div class="row">
+        <span class="label-control">text</span>
+        <input name="default" value="default value" readonly />
+      </div>
+      <div class="row">
+        <!-- <Label for="id-value"></Label> -->
+
+        <label class="label-control" for="text">text</label>
+        <input id="text" type="text" name="text" maxlength="20" minlength="5" />
+      </div>
+      <div class="row">
+        <label class="label-control" for="password">password</label>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          placeholder="Enter Password"
+          value="123"
+          required
+        />
+      </div>
+      <div class="row">
+        <label class="label-control" for="email">email</label>
+        <input id="email" type="email" name="email" />
+      </div>
+      <div class="row">
+        <label class="label-control" for="tel">tel</label>
+        <input id="tel" type="tel" name="tel" value="7843515" disabled/>
+      </div>
+      <div class="row">
+        <label class="label-control" for="number">number</label>
+        <input id="number" type="number" name="number" min="10" max="20" value="12" />
+      </div>
+      <div class="row">
+        <label class="label-control" for="range">range</label>
+        <input id="range" type="range" disabled name="range" min="10" max="20" value="12" />
+      </div>
+      <div class="row">
+        <label class="label-control" for="file">file</label>
+        <input id="file" type="file" name="file" />
+      </div>
+      <div class="row">
+        <label class="label-control" for="date">date</label>
+        <input id="date" type="date" name="date" />
+      </div>
+      <div class="row">
+        <label class="label-control" for="color">color</label>
+        <input id="color" type="color" name="color" />
+      </div>
+      <div class="row">
+        <label class="label-control" for="checkbox1">checkbox1</label>
+        <input id="checkbox1" type="checkbox" name="checkbox1" checked/>
+        <label class="label-control" for="checkbox2">checkbox2</label>
+        <input id="checkbox2" type="checkbox" name="checkbox2" />
+        <label class="label-control" for="checkbox3">checkbox3</label>
+        <input id="checkbox3" type="checkbox" name="checkbox3" />
+      </div>
+
+      <div class="row">
+        <label class="label-control">
+          radio1
+          <input type="radio" name="radio" value="1" checked/>
+        </label>
+        <label class="label-control">
+          radio2
+          <input type="radio" name="radio" value="2"/>
+        </label>
+        <label class="label-control">
+          radio3
+          <input type="radio" name="radio" value="3"/>
+        </label>
+      </div>
+
+      <div class="row">
+        <label for="select" class="label-control">select</label>
+        <select id="select" name="select">
+          <option value="option1">Option 1</option>
+          <option value="option2" selected>Option 2</option>
+          <option value="option3">Option 3</option>
+          <option value="option4">Option 4</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="select-multi" class="label-control">select multi</label>
+        <select multiple id="select-multi" name="select-multi">
+          <option value="0" selected>Option 1</option>
+          <option value="1">Option 2</option>
+          <option value="2">Option 3</option>
+          <option value="3" selected>Option 4</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label class="label-control" for="textarea">textarea</label>
+        <textarea name="textarea" id="textarea" rows="5" cols="100">Default</textarea>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <input type="submit" value="SEND"/>
+        <input type="reset" />
+        <input type="button" value="Button" />
+        <hr />
+        <button type="submit">SEND <i class="far fa-paper-plane"></i></button>
+        <button type="reset">Reset</button>
+        <button type="button">Button</button>
+      </div>
+    </form>
+  </body>
+</html>
